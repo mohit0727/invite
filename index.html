@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mohit &amp; Arushi · Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --rose:        #b76e79;
+    --rose-deep:   #8a4a55;
+    --gold:        #c9a96e;
+    --gold-deep:   #a4854a;
+    --cream:       #fdf8f3;
+    --ivory:       #f7eee2;
+    --ink:         #3a2e2a;
+    --muted:       #6b5b54;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 18px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 500; }
+
+  .script { font-family: 'Great Vibes', cursive; font-weight: 400; }
+
+  /* ───────────── Hero ───────────── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(201,169,110,0.18), transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(183,110,121,0.18), transparent 50%),
+      linear-gradient(180deg, var(--cream) 0%, var(--ivory) 100%);
+  }
+
+  .ornament {
+    color: var(--gold-deep);
+    font-size: 1.5rem;
+    letter-spacing: 0.4em;
+    margin: 1rem 0;
+  }
+
+  .save-the-date {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--rose-deep);
+    margin-bottom: 1.5rem;
+  }
+
+  .names {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(4rem, 12vw, 9rem);
+    line-height: 1;
+    color: var(--ink);
+    margin: 0.5rem 0;
+  }
+
+  .amp {
+    display: block;
+    color: var(--gold-deep);
+    font-size: 0.7em;
+    line-height: 0.8;
+  }
+
+  .tagline {
+    font-style: italic;
+    font-size: 1.25rem;
+    color: var(--muted);
+    max-width: 480px;
+    margin: 1.5rem auto;
+  }
+
+  .hero-date {
+    margin-top: 2rem;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: var(--ink);
+  }
+
+  .hero-date strong {
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 0.2em;
+    margin: 0.5rem 0;
+    color: var(--rose-deep);
+    font-weight: 500;
+  }
+
+  .scroll-cue {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--gold-deep);
+    font-size: 0.9rem;
+    letter-spacing: 0.3em;
+    animation: bob 2s ease-in-out infinite;
+  }
+
+  @keyframes bob {
+    0%, 100% { transform: translate(-50%, 0); }
+    50%      { transform: translate(-50%, 8px); }
+  }
+
+  /* ───────────── Sections ───────────── */
+  section {
+    padding: 6rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .section-title .script {
+    color: var(--rose-deep);
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .section-title h2 {
+    font-size: 1rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 0.5rem;
+  }
+
+  .divider {
+    width: 80px;
+    height: 1px;
+    background: var(--gold);
+    margin: 1.5rem auto;
+    position: relative;
+  }
+
+  .divider::before,
+  .divider::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    width: 7px;
+    height: 7px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+
+  .divider::before { left: -10px; }
+  .divider::after  { right: -10px; }
+
+  /* ───────────── Story ───────────── */
+  .story {
+    background: var(--ivory);
+  }
+
+  .story p {
+    max-width: 620px;
+    margin: 0 auto 1.2rem;
+    text-align: center;
+    font-size: 1.15rem;
+  }
+
+  /* ───────────── Countdown ───────────── */
+  .countdown {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+  }
+
+  .count-box {
+    background: white;
+    padding: 1.5rem 1rem;
+    min-width: 110px;
+    border: 1px solid rgba(201,169,110,0.4);
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(58,46,42,0.06);
+  }
+
+  .count-box .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    color: var(--rose-deep);
+    line-height: 1;
+  }
+
+  .count-box .label {
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 0.5rem;
+  }
+
+  /* ───────────── Events (full-screen) ───────────── */
+  .events-wrapper {
+    margin: 0;
+    padding: 0;
+    max-width: none;
+  }
+
+  .event-screen {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--ivory);
+    overflow: hidden;
+  }
+
+  .event-screen::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(42,31,28,0.72), rgba(58,46,42,0.55));
+    z-index: 1;
+  }
+
+  /* Per-event background images + tinted gradient fallbacks */
+  .event-mehendi {
+    background-image:
+      linear-gradient(135deg, rgba(120,55,30,0.55), rgba(180,100,50,0.4)),
+      url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1600&q=80&auto=format');
+  }
+  .event-sangeet {
+    background-image:
+      linear-gradient(135deg, rgba(75,30,90,0.6), rgba(180,90,140,0.45)),
+      url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1600&q=80&auto=format');
+  }
+  .event-wedding {
+    background-image:
+      linear-gradient(135deg, rgba(120,30,40,0.6), rgba(180,80,90,0.45)),
+      url('https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1600&q=80&auto=format');
+  }
+  .event-reception {
+    background-image:
+      linear-gradient(135deg, rgba(30,40,70,0.65), rgba(110,90,140,0.45)),
+      url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1600&q=80&auto=format');
+  }
+
+  .event-content {
+    position: relative;
+    z-index: 2;
+    max-width: 620px;
+    padding: 3rem 2rem;
+    background: rgba(20, 14, 12, 0.35);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(201, 169, 110, 0.45);
+    border-radius: 6px;
+  }
+
+  .event-content .icon {
+    font-size: 2.2rem;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
+  .event-content .event-label {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+
+  .event-content h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(3.5rem, 8vw, 5.5rem);
+    color: var(--ivory);
+    line-height: 1;
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+
+  .event-content .event-divider {
+    width: 80px;
+    height: 1px;
+    background: var(--gold);
+    margin: 1.25rem auto;
+    position: relative;
+  }
+
+  .event-content .event-divider::before,
+  .event-content .event-divider::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    width: 7px;
+    height: 7px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+  .event-content .event-divider::before { left: -10px; }
+  .event-content .event-divider::after  { right: -10px; }
+
+  .event-content .when {
+    font-style: italic;
+    font-size: 1.25rem;
+    color: var(--ivory);
+    margin-bottom: 0.75rem;
+  }
+
+  .event-content .where {
+    font-size: 1.05rem;
+    color: rgba(247, 238, 226, 0.9);
+    letter-spacing: 0.05em;
+    line-height: 1.7;
+  }
+
+  .event-content .dresscode {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* On mobile, fixed background-attachment is glitchy — switch to scroll */
+  @media (max-width: 768px) {
+    .event-screen { background-attachment: scroll; }
+  }
+
+  /* ───────────── RSVP ───────────── */
+  .rsvp {
+    background: linear-gradient(180deg, var(--ivory) 0%, var(--cream) 100%);
+    text-align: center;
+  }
+
+  .rsvp form {
+    max-width: 480px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .rsvp input, .rsvp select, .rsvp textarea {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 1px solid rgba(201,169,110,0.5);
+    background: white;
+    border-radius: 3px;
+    color: var(--ink);
+  }
+
+  .rsvp input:focus, .rsvp select:focus, .rsvp textarea:focus {
+    outline: none;
+    border-color: var(--rose);
+    box-shadow: 0 0 0 3px rgba(183,110,121,0.15);
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.9rem 2.5rem;
+    background: var(--rose-deep);
+    color: white;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .btn:hover {
+    background: var(--ink);
+    transform: translateY(-2px);
+  }
+
+  /* ───────────── Footer ───────────── */
+  footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: var(--ink);
+    color: var(--ivory);
+  }
+
+  footer .script {
+    color: var(--gold);
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+
+  footer p {
+    margin-top: 1rem;
+    font-style: italic;
+    opacity: 0.85;
+  }
+
+  /* ───────────── Reveal animation ───────────── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 600px) {
+    section { padding: 4rem 1.5rem; }
+    .count-box { min-width: 80px; padding: 1rem 0.5rem; }
+    .count-box .num { font-size: 2rem; }
+  }
+
+  /* ───────────── Landing overlay ───────────── */
+  .landing {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a0d0a 0%, #2a1714 100%);
+    color: var(--ivory);
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+  }
+
+  .landing.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  /* ── Velvet curtains ── */
+  .curtain {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 52vw;            /* slight overlap so the seam has no gap */
+    z-index: 1;
+    transition:
+      transform 1.9s cubic-bezier(0.65, 0.02, 0.25, 1),
+      border-radius 1.9s cubic-bezier(0.65, 0.02, 0.25, 1),
+      box-shadow 1.9s ease;
+    will-change: transform, border-radius;
+    box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.45);
+  }
+
+  /* base velvet — layered folds for richer texture */
+  .curtain-left {
+    left: 0;
+    transform-origin: top left;
+    background-image:
+      /* highlight stripes (lighter folds catching light) */
+      repeating-linear-gradient(
+        90deg,
+        transparent 0,
+        transparent 38px,
+        rgba(255, 220, 200, 0.10) 40px,
+        rgba(255, 220, 200, 0.06) 44px,
+        transparent 46px,
+        transparent 84px
+      ),
+      /* deep shadow stripes (the fold creases) */
+      repeating-linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.38) 0,
+        rgba(0, 0, 0, 0.05) 22px,
+        rgba(0, 0, 0, 0.05) 58px,
+        rgba(0, 0, 0, 0.38) 80px
+      ),
+      /* subtle vertical sheen variation */
+      linear-gradient(180deg,
+        rgba(255, 230, 210, 0.10) 0%,
+        transparent 25%,
+        transparent 75%,
+        rgba(0, 0, 0, 0.25) 100%),
+      /* base red — brighter outer, darker toward centre */
+      linear-gradient(90deg, #d92738 0%, #a31822 55%, #5a0a12 100%);
+  }
+
+  .curtain-right {
+    right: 0;
+    transform-origin: top right;
+    background-image:
+      repeating-linear-gradient(
+        90deg,
+        transparent 0,
+        transparent 38px,
+        rgba(255, 220, 200, 0.10) 40px,
+        rgba(255, 220, 200, 0.06) 44px,
+        transparent 46px,
+        transparent 84px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.38) 0,
+        rgba(0, 0, 0, 0.05) 22px,
+        rgba(0, 0, 0, 0.05) 58px,
+        rgba(0, 0, 0, 0.38) 80px
+      ),
+      linear-gradient(180deg,
+        rgba(255, 230, 210, 0.10) 0%,
+        transparent 25%,
+        transparent 75%,
+        rgba(0, 0, 0, 0.25) 100%),
+      linear-gradient(90deg, #5a0a12 0%, #a31822 45%, #d92738 100%);
+  }
+
+  /* soft inner shadow where each curtain meets the centre line */
+  .curtain-left::after,
+  .curtain-right::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 90px;
+    pointer-events: none;
+  }
+  .curtain-left::after {
+    right: 0;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.65), transparent);
+  }
+  .curtain-right::after {
+    left: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.65), transparent);
+  }
+
+  /* Gold pelmet / curtain rod at the top */
+  .curtain-rod {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 42px;
+    z-index: 3;
+    background:
+      linear-gradient(180deg,
+        #f1d589 0%,
+        var(--gold) 30%,
+        var(--gold-deep) 70%,
+        #5e451f 100%);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.55);
+  }
+
+  .curtain-rod::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -12px;
+    height: 14px;
+    background:
+      radial-gradient(circle at 20px 0, var(--gold-deep) 0 7px, transparent 8px),
+      radial-gradient(circle at 60px 0, var(--gold-deep) 0 7px, transparent 8px);
+    background-size: 80px 14px;
+    background-repeat: repeat-x;
+    opacity: 0.9;
+  }
+
+  /* Open the curtains in an arc — they translate, rotate, and gather */
+  .landing.opening .curtain-left {
+    transform: translateX(-92%) rotate(-9deg) scaleX(0.62);
+    border-bottom-right-radius: 90% 55%;
+    border-top-right-radius: 20% 100%;
+    box-shadow: inset -40px 0 80px rgba(0, 0, 0, 0.7);
+  }
+  .landing.opening .curtain-right {
+    transform: translateX(92%) rotate(9deg) scaleX(0.62);
+    border-bottom-left-radius: 90% 55%;
+    border-top-left-radius: 20% 100%;
+    box-shadow: inset 40px 0 80px rgba(0, 0, 0, 0.7);
+  }
+  .landing.opening .curtain-rod   { opacity: 0; transition: opacity 0.6s ease 0.9s; }
+
+  /* ── Confetti ── */
+  .confetti-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+  }
+
+  .confetti {
+    position: absolute;
+    top: -20px;
+    width: 10px;
+    height: 14px;
+    opacity: 0.95;
+    animation: confettiFall var(--duration, 4s) var(--delay, 0s) cubic-bezier(0.35, 0.2, 0.6, 1) forwards;
+    transform-origin: center;
+  }
+
+  .confetti.circle { border-radius: 50%; }
+  .confetti.ribbon { width: 6px; height: 18px; }
+  .confetti.square { width: 9px; height: 9px; }
+
+  @keyframes confettiFall {
+    0% {
+      transform: translate3d(0, -20px, 0) rotateZ(0deg) rotateY(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform:
+        translate3d(var(--sway, 0px), 110vh, 0)
+        rotateZ(var(--spin, 720deg))
+        rotateY(540deg);
+      opacity: 0.85;
+    }
+  }
+
+  /* Landing content sits on top of the curtains */
+  .landing-inner {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    transition: opacity 0.5s ease;
+  }
+
+  .landing.opening .landing-inner { opacity: 0; }
+
+  .landing .envelope {
+    font-size: 4rem;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    animation: floaty 3s ease-in-out infinite;
+  }
+
+  @keyframes floaty {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-10px); }
+  }
+
+  .landing .greeting {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  .landing .landing-names {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(3.5rem, 10vw, 7rem);
+    line-height: 1;
+    margin: 0.5rem 0 0.5rem;
+    color: var(--ivory);
+  }
+
+  .landing .landing-names .amp {
+    color: var(--gold);
+    display: inline;
+    font-size: 0.8em;
+  }
+
+  .landing .invite-line {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: rgba(247,238,226,0.85);
+    max-width: 480px;
+    margin: 1rem auto 2.5rem;
+  }
+
+  .landing .open-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.1rem 2.8rem;
+    background: transparent;
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    border: 1px solid var(--gold);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .landing .open-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gold);
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+    z-index: 0;
+  }
+
+  .landing .open-btn:hover::before { transform: translateX(0); }
+
+  .landing .open-btn span {
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+  }
+
+  .landing .open-btn:hover span { color: var(--ink); }
+
+  .landing .ornament-line {
+    color: var(--gold);
+    letter-spacing: 0.5em;
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+    opacity: 0.7;
+  }
+
+  /* Lock background scroll while landing is up */
+  body.landing-open { overflow: hidden; }
+</style>
+</head>
+<body class="landing-open">
+
+  <!-- LANDING / OPEN INVITATION -->
+  <div class="landing" id="landing">
+    <!-- Red velvet curtains -->
+    <div class="curtain curtain-left"></div>
+    <div class="curtain curtain-right"></div>
+    <div class="curtain-rod"></div>
+
+    <!-- Content on stage -->
+    <div class="landing-inner">
+      <div class="envelope">✉</div>
+      <div class="greeting">You're Invited</div>
+
+      <div class="ornament-line">· · ·</div>
+
+      <div class="landing-names">
+        Mohit <span class="amp">&amp;</span> Arushi
+      </div>
+
+      <div class="ornament-line">· · ·</div>
+
+      <p class="invite-line">
+        Together with their families, request the honour of your presence
+        at the celebration of their wedding.
+      </p>
+
+      <button class="open-btn" id="openInviteBtn">
+        <span>Open Invitation ✦</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="save-the-date">Save the Date</div>
+    <div class="ornament">❦</div>
+
+    <h1 class="names">
+      Mohit
+      <span class="amp">&amp;</span>
+      Arushi
+    </h1>
+
+    <p class="tagline">
+      Two souls, one journey — together we begin forever.
+    </p>
+
+    <div class="hero-date">
+      Are getting married
+      <strong>24 · 11 · 2026</strong>
+      Pushkar, India
+    </div>
+
+    <div class="scroll-cue">SCROLL ↓</div>
+  </header>
+
+  <!-- STORY -->
+  <section class="story reveal">
+    <div class="section-title">
+      <div class="script">Our Story</div>
+      <div class="divider"></div>
+      <h2>How it all began</h2>
+    </div>
+    <p>
+      Funnily enough, we sat in the same classroom for years — passing each
+      other in the corridors, sharing the same teachers, never once
+      exchanging a word. Life had quietly placed us side by side, waiting
+      for the right moment.
+    </p>
+    <p>
+      That moment came years later, through our parents. What began as a
+      formal introduction quickly turned into easy conversation, then long
+      ones, and then the kind that make you forget to check the time.
+      Within a week, we both knew.
+    </p>
+    <p>
+      Sometimes the person you've been looking for has been right there
+      all along — you just needed someone to make the introduction. We'd
+      be honoured to have you with us as we say "I do."
+    </p>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section class="reveal" style="text-align:center;">
+    <div class="section-title">
+      <div class="script">Counting Down</div>
+      <div class="divider"></div>
+      <h2>Until we say I do</h2>
+    </div>
+
+    <div class="countdown" id="countdown">
+      <div class="count-box"><div class="num" id="days">--</div><div class="label">Days</div></div>
+      <div class="count-box"><div class="num" id="hours">--</div><div class="label">Hours</div></div>
+      <div class="count-box"><div class="num" id="minutes">--</div><div class="label">Minutes</div></div>
+      <div class="count-box"><div class="num" id="seconds">--</div><div class="label">Seconds</div></div>
+    </div>
+  </section>
+
+  <!-- EVENTS · intro -->
+  <section class="reveal">
+    <div class="section-title">
+      <div class="script">The Celebrations</div>
+      <div class="divider"></div>
+      <h2>Join us as we celebrate</h2>
+    </div>
+  </section>
+
+  <!-- EVENTS · full-screen panels -->
+  <div class="events-wrapper">
+
+    <section class="event-screen event-mehendi reveal">
+      <div class="event-content">
+        <span class="icon">✦</span>
+        <div class="event-label">Ceremony One</div>
+        <h3>Mehendi</h3>
+        <div class="event-divider"></div>
+        <div class="when">22 November 2026 · 4:00 PM</div>
+        <div class="where">
+          Rangmahal<br />
+          Pushkar, Rajasthan
+        </div>
+        <div class="dresscode">Dress code · Sunset Yellow</div>
+      </div>
+    </section>
+
+    <section class="event-screen event-sangeet reveal">
+      <div class="event-content">
+        <span class="icon">❀</span>
+        <div class="event-label">Ceremony Two</div>
+        <h3>Sangeet</h3>
+        <div class="event-divider"></div>
+        <div class="when">23 November 2026 · 7:00 PM</div>
+        <div class="where">
+          Rangmahal<br />
+          Pushkar, Rajasthan
+        </div>
+        <div class="dresscode">Dress code · Royal Jewel Tones</div>
+      </div>
+    </section>
+
+    <section class="event-screen event-wedding reveal">
+      <div class="event-content">
+        <span class="icon">❦</span>
+        <div class="event-label">The Main Event</div>
+        <h3>Wedding</h3>
+        <div class="event-divider"></div>
+        <div class="when">24 November 2026 · 6:00 PM</div>
+        <div class="where">
+          Rangmahal<br />
+          Pushkar, Rajasthan
+        </div>
+        <div class="dresscode">Dress code · Traditional Red &amp; Gold</div>
+      </div>
+    </section>
+
+    <section class="event-screen event-reception reveal">
+      <div class="event-content">
+        <span class="icon">✺</span>
+        <div class="event-label">Ceremony Four</div>
+        <h3>Reception</h3>
+        <div class="event-divider"></div>
+        <div class="when">25 November 2026 · 8:00 PM</div>
+        <div class="where">
+          Rangmahal<br />
+          Pushkar, Rajasthan
+        </div>
+        <div class="dresscode">Dress code · Cocktail / Indo-Western</div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- RSVP -->
+  <section class="rsvp reveal">
+    <div class="section-title">
+      <div class="script">RSVP</div>
+      <div class="divider"></div>
+      <h2>Kindly reply by 24 October 2026</h2>
+    </div>
+
+    <form onsubmit="handleRSVP(event)">
+      <input type="text" placeholder="Your Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <select required>
+        <option value="">Will you be attending?</option>
+        <option value="yes">Joyfully accepts</option>
+        <option value="no">Regretfully declines</option>
+      </select>
+      <select>
+        <option value="0">Number of guests</option>
+        <option value="1">1 guest</option>
+        <option value="2">2 guests</option>
+        <option value="3">3 guests</option>
+        <option value="4">4 guests</option>
+      </select>
+      <textarea rows="3" placeholder="A message for the couple (optional)"></textarea>
+      <button type="submit" class="btn">Send RSVP</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="script">Mohit &amp; Arushi</div>
+    <p>"And they lived happily ever after."</p>
+    <p style="font-size: 0.85rem; opacity: 0.6; margin-top: 1.5rem;">
+      With love · Pushkar · 24.11.2026
+    </p>
+  </footer>
+
+  <script>
+    // ───── Confetti ─────
+    function launchConfetti(count = 90) {
+      const colors = [
+        '#c9a96e', '#e3c47b', '#b76e79', '#8a4a55',
+        '#d92738', '#f7eee2', '#ec4899', '#ffd166'
+      ];
+      const shapes = ['', 'circle', 'ribbon', 'square'];
+      const container = document.createElement('div');
+      container.className = 'confetti-container';
+      document.body.appendChild(container);
+
+      for (let i = 0; i < count; i++) {
+        const piece = document.createElement('div');
+        const shape = shapes[Math.floor(Math.random() * shapes.length)];
+        piece.className = 'confetti' + (shape ? ' ' + shape : '');
+
+        const startX = Math.random() * 100;          // vw
+        const sway   = -150 + Math.random() * 300;   // px horizontal drift
+        const spin   = (Math.random() < 0.5 ? -1 : 1) * (360 + Math.random() * 720);
+        const dur    = 3.5 + Math.random() * 3.5;    // s
+        const delay  = Math.random() * 0.9;          // s
+
+        piece.style.left  = startX + 'vw';
+        piece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        piece.style.setProperty('--sway', sway + 'px');
+        piece.style.setProperty('--spin', spin + 'deg');
+        piece.style.setProperty('--duration', dur + 's');
+        piece.style.setProperty('--delay', delay + 's');
+
+        container.appendChild(piece);
+      }
+
+      // A second, lighter burst from the sides ~0.6s later, like the curtains shaking it loose
+      setTimeout(() => {
+        for (let i = 0; i < 40; i++) {
+          const piece = document.createElement('div');
+          const shape = shapes[Math.floor(Math.random() * shapes.length)];
+          piece.className = 'confetti' + (shape ? ' ' + shape : '');
+          const fromLeft = Math.random() < 0.5;
+          piece.style.left = (fromLeft ? Math.random() * 20 : 80 + Math.random() * 20) + 'vw';
+          piece.style.top  = '-20px';
+          piece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+          piece.style.setProperty('--sway', (fromLeft ? 1 : -1) * (50 + Math.random() * 200) + 'px');
+          piece.style.setProperty('--spin', (Math.random() * 1080) + 'deg');
+          piece.style.setProperty('--duration', (3 + Math.random() * 3) + 's');
+          piece.style.setProperty('--delay', (Math.random() * 0.5) + 's');
+          container.appendChild(piece);
+        }
+      }, 600);
+
+      // Tidy up the DOM after everything has fallen
+      setTimeout(() => container.remove(), 9000);
+    }
+
+    // ───── Open invitation (curtain reveal) ─────
+    document.getElementById('openInviteBtn').addEventListener('click', () => {
+      const landing = document.getElementById('landing');
+      landing.classList.add('opening');           // start curtain animation
+      window.scrollTo({ top: 0, behavior: 'instant' });
+
+      // Confetti bursts shortly after the curtains start parting
+      setTimeout(launchConfetti, 350);
+
+      // After curtains finish parting, remove the overlay entirely
+      setTimeout(() => {
+        landing.classList.add('hidden');
+        document.body.classList.remove('landing-open');
+      }, 2000);
+    });
+
+    // ───── Countdown ─────
+    const weddingDate = new Date('2026-11-24T18:00:00+05:30').getTime();
+
+    function updateCountdown() {
+      const now  = Date.now();
+      const diff = weddingDate - now;
+
+      if (diff < 0) {
+        document.getElementById('countdown').innerHTML =
+          '<h3 style="color:var(--rose-deep);font-size:2rem;">We are married! 💍</h3>';
+        return;
+      }
+
+      const days    = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours   = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      document.getElementById('days').textContent    = String(days).padStart(2, '0');
+      document.getElementById('hours').textContent   = String(hours).padStart(2, '0');
+      document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+      document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // ───── Reveal on scroll ─────
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('visible');
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // ───── RSVP handler ─────
+    function handleRSVP(e) {
+      e.preventDefault();
+      alert('Thank you! Your RSVP has been received. We can\'t wait to celebrate with you 💛');
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
