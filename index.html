@@ -237,6 +237,8 @@
     position: relative;
     min-height: 100vh;
     display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -260,28 +262,40 @@
   /* Per-event background images + tinted gradient fallbacks */
   .event-mehendi {
     background-image:
-      linear-gradient(135deg, rgba(120,55,30,0.55), rgba(180,100,50,0.4)),
-      url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1600&q=80&auto=format');
+      linear-gradient(135deg, #2f4f2c, #5d7f3c 55%, #38592e);
   }
   .event-sangeet {
     background-image:
-      linear-gradient(135deg, rgba(75,30,90,0.6), rgba(180,90,140,0.45)),
-      url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1600&q=80&auto=format');
+      linear-gradient(135deg, #4a1140, #9b3a6e 55%, #5d1a4a);
   }
+  /* No photograph here — the cut-out portrait carries the panel, so the
+     backdrop stays a plain turmeric wash that the figures sit cleanly against */
   .event-haldi {
     background-image:
-      linear-gradient(135deg, rgba(150,95,10,0.6), rgba(214,160,40,0.42)),
-      url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1600&q=80&auto=format');
+      linear-gradient(135deg, #7a4a08, #b8821f 55%, #8a5a10);
   }
   .event-baraat {
     background-image:
-      linear-gradient(135deg, rgba(120,30,40,0.6), rgba(180,80,90,0.45)),
-      url('https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1600&q=80&auto=format');
+      linear-gradient(135deg, #5c1220, #a23141 55%, #6d1826);
   }
   .event-varmaala {
     background-image:
-      linear-gradient(135deg, rgba(90,25,55,0.65), rgba(190,110,90,0.42)),
-      url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1600&q=80&auto=format');
+      linear-gradient(135deg, #17264d, #35558c 55%, #1c2e57);
+  }
+
+  /* Cut-out couple portrait shown alongside an event's details */
+  .event-portrait {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: min(560px, 86vw);
+    filter: drop-shadow(0 18px 30px rgba(20, 14, 12, 0.45));
+  }
+
+  .event-portrait img {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 
   .event-content {
@@ -893,6 +907,11 @@
   <div class="events-wrapper">
 
     <section class="event-screen event-mehendi reveal">
+      <picture class="event-portrait">
+        <source srcset="images/mehendi-couple.webp" type="image/webp" />
+        <img src="images/mehendi-couple.png"
+             alt="Mohit and Arushi at their Mehendi, her hands covered in henna" />
+      </picture>
       <div class="event-content">
         <span class="icon">✦</span>
         <div class="event-label">Ceremony One</div>
@@ -906,6 +925,11 @@
     </section>
 
     <section class="event-screen event-sangeet reveal">
+      <picture class="event-portrait">
+        <source srcset="images/sangeet-couple.webp" type="image/webp" />
+        <img src="images/sangeet-couple.png"
+             alt="Mohit and Arushi dancing at their Sangeet" />
+      </picture>
       <div class="event-content">
         <span class="icon">❀</span>
         <div class="event-label">Ceremony Two</div>
@@ -920,6 +944,11 @@
     </section>
 
     <section class="event-screen event-haldi reveal">
+      <picture class="event-portrait">
+        <source srcset="images/haldi-couple.webp" type="image/webp" />
+        <img src="images/haldi-couple.png"
+             alt="Mohit and Arushi at their Haldi, covered in turmeric and marigold garlands" />
+      </picture>
       <div class="event-content">
         <span class="icon">✿</span>
         <div class="event-label">Ceremony Three</div>
@@ -934,6 +963,11 @@
     </section>
 
     <section class="event-screen event-baraat reveal">
+      <picture class="event-portrait">
+        <source srcset="images/baraat-couple.webp" type="image/webp" />
+        <img src="images/baraat-couple.png"
+             alt="Mohit carried on friends' shoulders in the Baraat procession, with dhol players alongside" />
+      </picture>
       <div class="event-content">
         <span class="icon">✺</span>
         <div class="event-label">Ceremony Four</div>
@@ -948,6 +982,11 @@
     </section>
 
     <section class="event-screen event-varmaala reveal">
+      <picture class="event-portrait">
+        <source srcset="images/varmaala-couple.webp" type="image/webp" />
+        <img src="images/varmaala-couple.png"
+             alt="Mohit and Arushi exchanging garlands at the Varmaala" />
+      </picture>
       <div class="event-content">
         <span class="icon">❦</span>
         <div class="event-label">The Main Event</div>
