@@ -264,6 +264,10 @@
     background-image:
       linear-gradient(135deg, #2f4f2c, #5d7f3c 55%, #38592e);
   }
+  .event-mayra {
+    background-image:
+      linear-gradient(135deg, #6b1d2e, #b5545c 55%, #7a2433);
+  }
   .event-sangeet {
     background-image:
       linear-gradient(135deg, #4a1140, #9b3a6e 55%, #5d1a4a);
@@ -281,6 +285,10 @@
   .event-varmaala {
     background-image:
       linear-gradient(135deg, #17264d, #35558c 55%, #1c2e57);
+  }
+  .event-pheras {
+    background-image:
+      linear-gradient(135deg, #5a2a06, #a8541a 55%, #6b3209);
   }
 
   /* Cut-out couple portrait shown alongside an event's details */
@@ -398,6 +406,14 @@
     font-size: 1.5rem;
     color: var(--rose-deep);
     margin-top: 0.6rem;
+  }
+
+  /* Wraps to stacked lines on narrow screens */
+  .credit-pair {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 3rem;
   }
 
   .credit-names .amp {
@@ -914,12 +930,26 @@
       </picture>
       <div class="event-content">
         <span class="icon">✦</span>
-        <div class="event-label">Ceremony One</div>
+        <div class="event-label">Mehendi Laga Ke Rakhna</div>
         <h3>Mehendi</h3>
         <div class="event-divider"></div>
         <div class="when">22 November 2026 · 2:15 PM</div>
         <div class="where">
-          Geetanjay (Home)
+          At Residence
+        </div>
+      </div>
+    </section>
+
+    <section class="event-screen event-mayra reveal">
+      <div class="event-content">
+        <span class="icon">❁</span>
+        <div class="event-label">Yeh Bandhan Toh Pyaar Ka Bandhan Hai</div>
+        <h3>Mayra (Bride's Side)</h3>
+        <div class="event-divider"></div>
+        <div class="when">23 November 2026 · 10:15 AM</div>
+        <div class="where">
+          Rangmahal<br />
+          Pushkar, Rajasthan
         </div>
       </div>
     </section>
@@ -932,7 +962,7 @@
       </picture>
       <div class="event-content">
         <span class="icon">❀</span>
-        <div class="event-label">Ceremony Two</div>
+        <div class="event-label">Bole Chudiyan</div>
         <h3>Sangeet</h3>
         <div class="event-divider"></div>
         <div class="when">23 November 2026 · 7:00 PM</div>
@@ -951,7 +981,7 @@
       </picture>
       <div class="event-content">
         <span class="icon">✿</span>
-        <div class="event-label">Ceremony Three</div>
+        <div class="event-label">Rang De Basanti</div>
         <h3>Haldi</h3>
         <div class="event-divider"></div>
         <div class="when">24 November 2026 · 10:15 AM</div>
@@ -970,7 +1000,7 @@
       </picture>
       <div class="event-content">
         <span class="icon">✺</span>
-        <div class="event-label">Ceremony Four</div>
+        <div class="event-label">Aaj Mere Yaar Ki Shaadi Hai</div>
         <h3>Baraat</h3>
         <div class="event-divider"></div>
         <div class="when">24 November 2026 · 5:30 PM</div>
@@ -989,10 +1019,24 @@
       </picture>
       <div class="event-content">
         <span class="icon">❦</span>
-        <div class="event-label">The Main Event</div>
+        <div class="event-label">Dulhe Ka Sehra Suhana Lagta Hai</div>
         <h3>Varmaala</h3>
         <div class="event-divider"></div>
         <div class="when">24 November 2026 · 8:30 PM</div>
+        <div class="where">
+          Rangmahal<br />
+          Pushkar, Rajasthan
+        </div>
+      </div>
+    </section>
+
+    <section class="event-screen event-pheras reveal">
+      <div class="event-content">
+        <span class="icon">❂</span>
+        <div class="event-label">Tujh Mein Rab Dikhta Hai</div>
+        <h3>Pheras</h3>
+        <div class="event-divider"></div>
+        <div class="when">24 November 2026 · Midnight</div>
         <div class="where">
           Rangmahal<br />
           Pushkar, Rajasthan
@@ -1012,7 +1056,15 @@
 
     <div class="credit-row">
       <div class="credit-role">Sponsored by</div>
-      <div class="credit-names">Geeta Mittal <span class="amp">&amp;</span> Ajay Mittal</div>
+      <div class="credit-pair">
+        <div class="credit-names">Geeta Mittal <span class="amp">&amp;</span> Ajay Mittal</div>
+        <div class="credit-names">R. K. Garg <span class="amp">&amp;</span> Madhuri Garg</div>
+      </div>
+    </div>
+
+    <div class="credit-row">
+      <div class="credit-role">Supported by</div>
+      <div class="credit-names">Ojaswi Garg <span class="amp">&amp;</span> Mayank Mittal</div>
     </div>
 
     <div class="credit-row">
